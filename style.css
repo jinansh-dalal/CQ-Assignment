@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F7FA;
+    color: #2C3E50;
+    text-align: center;
+}
+
+header {
+    background-color: #5C7AEA;
+    padding: 15px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+#Nav-Container {
+    position: fixed;
+    display: flex;
+    background-color: #5C7AEA;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+#Nav-Bar {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#Logo {
+    font-size: 1.5rem;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+#search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-input:focus {
+    background-color: #ccc;
+}
+
+
+#search-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+#Welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+#Welcome::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url('images/body-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+#Welcome-Title {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+#Welcome-Desc {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#Welcome-Button {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#Welcome-Button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+#Featured {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#Featured-Title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    background-color: #5C7AEA;
+}
+
+#Book-Container {
+    margin: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.book-container::-webkit-scrollbar {
+    display: none;
+}
+
+.book {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    min-width: 200px;
+    text-align: center;
+    scroll-snap-align: center; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.Book:hover { 
+    transform: translateY(-5px);
+}
+
+.book img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.Book-Title {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.Book-Author {
+    font-size: 1rem;
+    color: #666;
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+#Categories {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#Categories-Title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    background-color: #5C7AEA
+}
+
+#Categories-Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.Category {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Category img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.Category:hover img {
+    filter: brightness(50%);
+    transform: scale(1.05);
+}
+
+.Overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.Category:hover .Overlay {
+    opacity: 1;
+}
+
+#Reviews {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#Reviews-Title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    background-color: #5C7AEA
+}
+
+#Reviews-Container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+}
+
+.Review {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Review:hover {
+    transform: translateY(-5px);
+}
+
+.Review-Text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.Reviewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Reviewer h4 {
+    font-size: 1.1rem;
+    color: #222;
+    margin: 0;
+}
+
+.Reviewer p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+}
+
+#Review-Form-Container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+#Review-Form-Title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#Review, #Name {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#Submit {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#Submit:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.Social-Media-Icons {
+    margin-top: 10px;
+}
+
+.Icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.Icon:hover {
+    color: #f39c12; /* Color on hover (Gold) */
+}

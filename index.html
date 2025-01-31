@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiceReads</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div id="Nav-Container">
+            <ul id="Nav-Bar">
+                <li><a class="link" id="Logo" href="#">NiceReads</a></li>
+                <li><a class="link" href="#Welcome">Home</a></li>
+                <li><a class="link" href="#Featured">Featured</a></li>
+                <li><a class="link" href="#Categories">Categories</a></li>
+                <li><a class="link" href="#Reviews">Reviews</a></li>
+            </ul>
+            <div id="Search-Container">
+                <input type="text" placeholder="Search books..." id="search-input">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="Welcome">
+
+        <div id="Welcome-Container">
+            <h1 id="Welcome-Title">Welcome to NiceReads: Your Gateway to Good Reads</h1>
+            <a id="Welcome-Desc">Your one-stop shop for the best books across all genres.</a>
+            <br>
+            <button id="Welcome-Button" href="#Categories">Browse Books</button>
+        </div>
+    </section>
+
+    <section id="Featured">
+        <h1 id="Featured-Title">Featured Books</h1>
+        <div id="Book-Container">
+            <div class="book">
+                <img src="images/book1.jpg" alt="Book 1">
+                <h3 class="Book-Title">The Great Gatsby</h3>
+                <p class="Book-Author">by F. Scott Fitzgerald</p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="images/book2.jpg" alt="Book 2">
+                <h3 class="Book-Title">1984</h3>
+                <p class="Book-Author">by George Orwell</p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="images/book3.jpg" alt="Book 3">
+                <h3 class="Book-Title">Robinson Crusoe</h3>
+                <p class="Book-Author">by Daniel Defoe</p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="images/book4.jpg" alt="Book 4">
+                <h3 class="Book-Title">Animal Farm</h3>
+                <p class="Book-Author">by George Orwell</p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="images/book5.jpg" alt="Book 5">
+                <h3 class="Book-Title">Jane Eyre</h3>
+                <p class="Book-Author">by Charlotte Bronte</p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="images/book6.jpg" alt="Book 6">
+                <h3 class="Book-Title">Eragon</h3>
+                <p class="Book-Author">by Cristopher Paolini</p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="images/book7.jpg" alt="Book 7">
+                <h3 class="Book-Title">Project Hail Mary</h3>
+                <p class="Book-Author">by Andy Weir</p>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Categories">
+        <h1 id="Categories-Title">Book Categories</h1>
+        <div id="Categories-Container">
+            <div class="Category">
+                <img src="images/fiction.jpg" alt="Fiction">
+                <div class="Overlay">Fiction</div>
+            </div>
+            <div class="Category">
+                <img src="images/non-fiction.jpg" alt="Non-Fiction">
+                <div class="Overlay">Non-Fiction</div>
+            </div>
+            <div class="Category">
+                <img src="images/scifi.png" alt="Sci-Fi">
+                <div class="Overlay">Sci-Fi</div>
+            </div>
+            <div class="Category">
+                <img src="images/mythology.jpg" alt="Mythology">
+                <div class="Overlay">Mythology</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Reviews">
+        <h1 id="Reviews-Title">What Readers Say</h1>
+        <div id="Reviews-Container">
+            <div class="Review">
+                <p class="Review-Text">"An amazing book-buying experience! The website is super easy to navigate."</p>
+                <div class="Reviewer">
+                    <h4>Pratham Sharma</h4>
+                    <p>Student</p>
+                </div>
+            </div>
+            <div class="Review">
+                <p class="Review-Text">"The book recommendations were spot on. Will definitely buy again and recommend this site to others too."</p>
+                <div class="Reviewer">
+                    <h4>Divyansh Joshi</h4>
+                    <p>Businessman</p>
+                </div>
+            </div>
+            <div class="Review">
+                <p class="Review-Text">"Finally found the book I have been searching for ages. Great buying experience"</p>
+                <div class="Reviewer">
+                    <h4>Unnati Mohta</h4>
+                    <p>Writer</p>
+                </div>
+            </div>
+        </div>
+        <div id="Review-Form-Container">
+            <h3 id="Review-Form-Title">Leave a Review</h3>
+            <form id="Review-Form">
+                <input type="text" id="Name" name="name" placeholder="Your Name" required>
+                <textarea id="Review" name="review" placeholder="Write your review..." required></textarea>
+                <button type="submit" id="Submit">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NiceReads | Contact us at support@nicereads.com</p>
+        <div class="Social-Media-Icons">
+            <a href="https://www.facebook.com/people/Jinansh-Dalal/pfbid0JL22atfWoirZ27yfAGRotf4Sf96Aemjq2taaP83FHSoyojfZf2E3FwG1gKYPesYMl/?mibextid=ZbWKwL" target="_blank" class="Icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="Icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/jinansh_dalal/" target="_blank" class="Icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jinansh-dalal/" target="_blank" class="Icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
